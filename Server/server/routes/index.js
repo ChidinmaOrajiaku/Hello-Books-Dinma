@@ -10,4 +10,6 @@ module.exports = (app) => {
   app.post('/api/users/signin', usersController.login);
   app.post('/api/users/books', booksController.create);
   app.get('/api/users/books', booksController.list);
+  app.put('/api/books/:booksId', booksController.update);
+  app.post('/api/users/:usersId/books', booksController.borrow);
 };

@@ -28,14 +28,15 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
-      // usersId: {
-      //   type: Sequelize.INTEGER,
-      //   onDelete: 'CASCADE',
-      //   references: {
-      //     model: 'Users',
-      //     key: 'id',
-      //     as: 'usersId',
-      //   },
+      usersId: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Users',
+          key: 'id',
+          as: 'usersId',
+        },
+      },
     }),
   down: (queryInterface /* , Sequelize */) => queryInterface.dropTable('Books'),
 };
